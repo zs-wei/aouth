@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+ 
+	<!-- 引入属性文件  --> 
+    <context:property-placeholder location="classpath:config.properties"/>
+    <!-- Service包(自动注入)-->
+    <context:component-scan base-package="com.djn.cn.auth.client.*.service"/>
+    <!-- openApiUtils -->
+    <bean id="openApiUtils" class="com.djn.cn.auth.client.base.utils.OpenApiUtils">
+        <property name="openApiUrl" value="${openApiUrl}"/> 
+        <property name="openAuthorizationUrl" value="${open.authorization.url}"/>
+        <property name="clientId" value="${open.authorization.client_key}"/>
+        <property name="clientSecret" value="${open.authorization.client_secret}"/>
+        <property name="openAuthorizationGrantType" value="${open.authorization.grant_type}"/>
+    </bean>
+	<!-- 引入MyBatis -->
+    <!-- <import resource="spring-mybatis.xml"/> --> 
+</beans>
