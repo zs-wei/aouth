@@ -31,7 +31,7 @@
         <httpclient.version>4.3</httpclient.version>
         <commons.lang.version>3.3.2</commons.lang.version>
         
-        <spring-security.version>5.2.1.RELEASE</spring-security.version>
+        <spring-security.version>5.3.3.RELEASE</spring-security.version>
         <spring-security-oauth2.version>2.0.2.RELEASE</spring-security-oauth2.version>
     </properties>
     <dependencies>
