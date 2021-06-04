@@ -29,7 +29,7 @@
 		<druid.version>1.0.18</druid.version>
 		<fastjson.version>1.2.8</fastjson.version>
 		<cas.client.version>3.3.3</cas.client.version>
-		<httpclient.version>4.3</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<commons.lang.version>3.3.2</commons.lang.version>
 	</properties>
 	<dependencies>
